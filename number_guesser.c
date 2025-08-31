@@ -9,8 +9,6 @@ int main() {
     int number_of_guesses;
     int guessed_number;
 
-    printf("%d", random_number);
-
     for (number_of_guesses=0; guessed_number != random_number; number_of_guesses++)
     {
         printf("Guess the number:");
@@ -33,4 +31,5 @@ int main() {
 
     return 0;
 }
+
 
