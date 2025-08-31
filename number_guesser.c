@@ -6,10 +6,12 @@ int main() {
     srand(time(0));  // seed with current time
 
     int random_number = (rand() % 100) + 1;  // range 1–100
-    int number_of_guesses=0;
+    int number_of_guesses;
     int guessed_number;
 
-    do
+    printf("%d", random_number);
+
+    for (number_of_guesses=0; guessed_number != random_number; number_of_guesses++)
     {
         printf("Guess the number:");
         scanf("%d", &guessed_number);
@@ -23,11 +25,12 @@ int main() {
         else {
             printf("CONGRATS!!!\n");
         }
-        number_of_guesses++;
-    } while (guessed_number!=random_number);
+    }
+    
 
     printf("You guessed the number in %d guesses", number_of_guesses);
     
 
     return 0;
 }
+
